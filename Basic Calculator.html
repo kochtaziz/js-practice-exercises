@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Basic Calculator</title>
+</head>
+<body>
+<script>
+  let a = Number(prompt('Enter first number:'));
+  let b = Number(prompt('Enter second number:'));
+  let op = prompt('Enter an operator (+, -, *, /):');
+
+  if (isNaN(a) || isNaN(b)) {
+    alert('Please enter valid numbers.');
+  } else {
+    switch (op) {
+      case '+':
+        alert('Result: ' + (a + b));
+        break;
+      case '-':
+        alert('Result: ' + (a - b));
+        break;
+      case '*':
+        alert('Result: ' + (a * b));
+        break;
+      case '/':
+        if (b === 0) {
+          alert('Division by zero is not allowed.');
+        } else {
+          alert('Result: ' + (a / b));
+        }
+        break;
+      default:
+        alert('Invalid operator.');
+    }
+  }
+</script>
+</body>
+</html>

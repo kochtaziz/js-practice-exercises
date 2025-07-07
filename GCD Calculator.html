@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GCD Calculator</title>
+</head>
+<body>
+<script>
+  let a, b;
+  do {
+    a = Number(prompt('Enter a positive integer:'));
+    b = Number(prompt('Enter another positive integer:'));
+  } while (a <= 1 || b <= 1 || isNaN(a) || isNaN(b));
+
+  while (a !== b) {
+    if (a > b) {
+      a = a - b;
+    } else {
+      b = b - a;
+    }
+  }
+
+  alert('GCD is: ' + a);
+</script>
+</body>
+</html>
